@@ -84,7 +84,7 @@ target_include_directories(rocsparse
 
 # Target link libraries
 target_link_libraries(rocsparse PRIVATE roc::rocprim hip::device)
-set(static_depends PACKAGE rocprim-devel)
+set(static_depends "")
 
 if (BUILD_WITH_ROCBLAS AND rocblas_FOUND)
   target_link_libraries(rocsparse PRIVATE roc::rocblas)
